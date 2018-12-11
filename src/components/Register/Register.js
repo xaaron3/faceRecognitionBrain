@@ -7,8 +7,6 @@ class Register extends React.Component {
       name: ''
    }
 
-
-
    onEmailChange = (e) => {
       this.setState({ email: e.target.value })
    }
@@ -22,7 +20,6 @@ class Register extends React.Component {
    }
 
    onSubmitSignIn = () => {
-      console.log(this.state);
       fetch('http://localhost:3000/register', {
          method: 'post',
          headers: {'Content-Type': 'application/json'},
