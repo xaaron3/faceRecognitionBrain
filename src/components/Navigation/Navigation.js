@@ -3,12 +3,17 @@ import React from 'react';
 const Navigation = ({ onRouteChange, isSignedIn }) => {
       if(isSignedIn) {
          return (
+            <div>
+            <p style={{display: 'flex', justifyContent: 'center'}}>FaceRecognition App</p>
             <nav style={{display: 'flex', justifyContent: 'flex-end'}}>
                <p onClick={() => onRouteChange('signout')} className='f3 link dim black underline pa3 pointer'>Sign Out</p>
             </nav>
+            </div>
          )
       } else {
          return (
+            <div>
+            <p style={{display: 'flex', justifyContent: 'center'}}>FaceRecognition App</p>
             <nav style={{display: 'flex', justifyContent: 'flex-end'}}>
                <p 
                   onClick={() => onRouteChange('signin')} 
@@ -19,6 +24,7 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
                   className='f3 link dim black underline pa3 pointer'
                   >Register</p>
             </nav>
+            </div>
          )
       }
 }
